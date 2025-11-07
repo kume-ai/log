@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -19,22 +20,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler jekyll jekyll-include-cache jekyll-seo-tag
+          gem install bundler jekyll jekyll-include-cache
           bundle init
           echo 'gem "jekyll"' >> Gemfile
           echo 'gem "minimal-mistakes-jekyll"' >> Gemfile
           echo 'gem "jekyll-include-cache"' >> Gemfile
           echo 'gem "jekyll-seo-tag"' >> Gemfile
           bundle install
-      - name: Build site with Jekyll
-  run: bundle exec jekyll build
 
-- name: Deploy to GitHub Pages
-  uses: peaceiris/actions-gh-pages@v3
-  with:
-    personal_token: ${{ secrets.GITHUB_TOKEN }}
-    publish_branch: gh-pages
-    publish_dir: ./_site
-    force_orphan: true
-    user_name: github-actions
-    user_email: github-actions@github.com
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          force_orphan: true
+          user_name: github-actions
+          user_email: github-actions@github.com
