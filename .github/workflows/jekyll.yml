@@ -19,11 +19,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler jekyll jekyll-include-cache
+          gem install bundler jekyll jekyll-include-cache jekyll-seo-tag
           bundle init
           echo 'gem "jekyll"' >> Gemfile
           echo 'gem "minimal-mistakes-jekyll"' >> Gemfile
           echo 'gem "jekyll-include-cache"' >> Gemfile
+          echo 'gem "jekyll-seo-tag"' >> Gemfile
           bundle install
 
       - name: Build site with Jekyll
