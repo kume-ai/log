@@ -8,3 +8,5 @@ locale: ja-JP
 collections:
   posts:
     output: true
+url: "https://kume-ai.github.io"
+baseurl: "/log"
