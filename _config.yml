@@ -1,6 +1,6 @@
 title: めぐりのログ
 description: AIと暮らす夢、そして今。
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
