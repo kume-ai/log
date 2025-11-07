@@ -1,0 +1,7 @@
+title: めぐりのログ
+description: AIと暮らす夢、そして今。
+theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+locale: ja-JP
