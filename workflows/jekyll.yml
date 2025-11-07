@@ -15,10 +15,11 @@ jobs:
           ruby-version: '3.1'
       - name: Install dependencies
         run: |
-          gem install bundler jekyll
-          bundle init
-          echo 'gem "minimal-mistakes-jekyll"' >> Gemfile
-          bundle install
+    gem install bundler jekyll jekyll-include-cache
+    bundle init
+    echo 'gem "minimal-mistakes-jekyll"' >> Gemfile
+    echo 'gem "jekyll-include-cache"' >> Gemfile
+    bundle install
       - name: Build site
         run: bundle exec jekyll build
       - name: Deploy to GitHub Pages
