@@ -26,12 +26,15 @@ jobs:
           echo 'gem "jekyll-include-cache"' >> Gemfile
           echo 'gem "jekyll-seo-tag"' >> Gemfile
           bundle install
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./_site
-          force_orphan: true
       - name: Build site with Jekyll
-        run: bundle exec jekyll build
+  run: bundle exec jekyll build
+
+- name: Deploy to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    personal_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_branch: gh-pages
+    publish_dir: ./_site
+    force_orphan: true
+    user_name: github-actions
+    user_email: github-actions@github.com
