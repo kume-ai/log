@@ -61,13 +61,13 @@
     "> 0.2%",
     "not dead"
   ],
+
     "rules": {
       "body-max-line-length": [
         0,
         "always"
       ]
-    }
-  },
+    },
   "release": {
     "branches": [
       "production"
