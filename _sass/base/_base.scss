@@ -481,13 +481,3 @@ mjx-container {
     margin-top: 3rem;
   }
 }
-
-// サイドバー跡地を削除
-.main {
-  margin-left: 0 !important; // サイドバー跡地を削除
-  margin-top: 80px; // ナビバー分の余白
-  max-width: 1000px; // 中央寄せ
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2rem;
-}
