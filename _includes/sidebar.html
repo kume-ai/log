@@ -1,13 +1,15 @@
 <header class="navbar">
-  <div class="nav-left">
-    <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+  <div class="inner">
+    <div class="nav-left">
+      <a href="/log/" class="site-title">Chirpy-!!</a>
+    </div>
+    <nav class="nav-right">
+      <ul>
+        <li><a href="/log/">Home</a></li>
+        <li><a href="/log/about/">About</a></li>
+        <li><a href="/log/categories/">Categories</a></li>
+        <li><a href="/log/tags/">Tags</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="nav-right">
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">Home</a></li>
-      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-      <li><a href="{{ '/categories/' | relative_url }}">Categories</a></li>
-      <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
-    </ul>
-  </nav>
 </header>
