@@ -172,3 +172,17 @@ main ul,
 #sidebar-right a:hover {
   color: #58a6ff;
 }
+
+/* 記事リスト hover範囲修正 */
+a.card-wrapper {
+  display: inline-block !important;
+}
+
+a.card-wrapper .card {
+  pointer-events: auto;
+}
+
+a.card-wrapper:hover {
+  background: none !important;
+  text-decoration: none;
+}
