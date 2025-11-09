@@ -14,7 +14,39 @@
   flex: 1 1 auto;
   max-width: 700px;
 }
+/* === Navbar横並び修正版 === */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 狭い画面では折り返し */
+  padding: 0.5rem 1rem;
+}
 
+header.navbar .nav-left a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color, #fff);
+}
+
+header.navbar .nav-right ul {
+  list-style: none;
+  display: flex;             /* 横並びにする */
+  gap: 1.5rem;               /* リンク間のスペース */
+  margin: 0;
+  padding: 0;
+}
+
+header.navbar .nav-right ul li a {
+  text-decoration: none;
+  color: var(--text-color, #fff);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+header.navbar .nav-right ul li a:hover {
+  color: var(--primary-color, #ffcc00);
+}
 .navbar {
   position: fixed;
   top: 0;
