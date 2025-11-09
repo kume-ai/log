@@ -1,6 +1,7 @@
 /* --- custom.scss --- */
 /* ここに自分のカスタムを全部書いてOK */
 
+
 .main {
   display: flex;
   justify-content: space-between;
@@ -39,7 +40,7 @@
     }
   }
 
-  ul {
+  header nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
