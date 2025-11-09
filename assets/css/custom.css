@@ -48,6 +48,15 @@
   }
 }
 
+/* 通常のul（記事一覧や本文）は元のまま */
+main ul,
+.post-content ul {
+  list-style: disc;
+  display: block;
+  margin-left: 1.5rem;
+  gap: 0;
+}
+
 
 /* --- reposition PWA update toast --- */
 #notification.toast {
