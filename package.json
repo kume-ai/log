@@ -66,8 +66,7 @@
         0,
         "always"
       ]
-    }
-  ],
+    },
   "release": {
     "branches": [
       "production"

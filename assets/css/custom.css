@@ -86,6 +86,12 @@ main ul,
   background-color: #79b8ff;
 }
 
+@media (max-width: 768px) {
+  #notification {
+    display: none !important;
+  }
+}
+
 /* --- right sidebar (for archive or widgets) --- */
 #sidebar-right {
   flex: 0 0 280px;
