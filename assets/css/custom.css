@@ -186,3 +186,18 @@ a.card-wrapper:hover {
   background: none !important;
   text-decoration: none;
 }
+/* hover範囲が広がりすぎるのを防ぐ */
+.post-list a {
+  display: inline-block !important;
+  width: auto !important;
+}
+
+.post-list .card {
+  pointer-events: auto;
+}
+
+/* hover時の装飾リセット */
+.post-list a:hover {
+  background: none !important;
+  text-decoration: none !important;
+}
