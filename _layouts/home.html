@@ -48,8 +48,11 @@ layout: default
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
-  <a href="{{ post.url | relative_url }}" class="card-wrapper card">
-  <article class="post-preview row g-0 flex-md-row-reverse">
+  <!--<a href="{{ post.url | relative_url }}" class="card-wrapper card">
+  <article class="post-preview row g-0 flex-md-row-reverse">-->
+
+    <a href="{{ post.url | relative_url }}" class="card-wrapper card post-preview row g-0 flex-md-row-reverse">
+  <article>
 
     {% assign card_body_col = '12' %}
 
