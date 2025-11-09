@@ -42,7 +42,8 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Fix sass-embedded build
         run: gem install sass-embedded -v 1.70.0 --no-document
-
+      - name: Update theme gems
+        run: bundle update jekyll-theme-chirpy
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
