@@ -235,3 +235,17 @@ a.card-wrapper:hover {
 .card-wrapper.card {
   overflow: hidden;
 }
+.card-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#post-list {
+  position: relative;
+  z-index: 2;
+}
+
+aside.sidebar,
+#mask {
+  z-index: 0 !important;
+}
