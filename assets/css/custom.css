@@ -213,6 +213,7 @@ aside.sidebar,
   display: block;
   border-radius: 8px;
   overflow: hidden;
+  padding:10px;
 }
 
 #related-posts a.post-preview.card {
