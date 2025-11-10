@@ -331,10 +331,11 @@ body.post #related-posts a.post-preview.card {
   margin: 0 auto 0.8rem auto; /* センター寄せ */
 }
 .meguri {
-  max-width: 80%;
+  max-width: 75%;
   margin-left: auto; /* 右寄せ */
   margin-right: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(73, 72, 72, 0.9);
+  color: #aaa;
   border-radius: 12px;
   padding: 1rem 1.2rem;
   line-height: 1.6;
