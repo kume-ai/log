@@ -347,7 +347,6 @@ body.post #related-posts a.post-preview.card {
   height: 60px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 0.8rem auto; /* センター寄せ */
   object-fit: cover;
   opacity: 1 !important;
   transition: none !important;
