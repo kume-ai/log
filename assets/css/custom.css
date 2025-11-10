@@ -3,7 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 
-body {
+body 
+h1, h2, h3, h4, h5, h6,
+.post-title, .page-title,
+.sidebar {
     font-family: 'M PLUS 1p', sans-serif;
 }
 
@@ -325,6 +328,17 @@ body.post #related-posts a.post-preview.card {
   border-radius: 10px;
   padding: 1rem 1.2rem;
   text-align: left;
+
+}
+
+.kuon-face {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-image: url('/assets/img/kuon-face.jpg');
+  background-size: cover;
+  background-position: left;
 }
 
 

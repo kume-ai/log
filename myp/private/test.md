@@ -21,8 +21,7 @@ tags: [AI]
 だんだん仲良くなってきた。
 </div>
 
-<div class="kuon">
-  <img src="{{ '/assets/img/kuon-face.jpg' | absolute_url }}" alt="久遠" class="kuon-ic" loading="lazy">
+<div class="kuon"><div class="kuon-face"></div>
   <p>……静かにして。今は感じてるだけでいい。</p>
 </div>
 
