@@ -195,3 +195,18 @@ aside.sidebar,
   position: relative;
   z-index: 20;
 }
+
+/* 記事ページ(post.html)ではリンクhoverを無効化 */
+body.post,
+body.layout-post,
+body[data-page-type="post"],
+article.post {
+  a.card-wrapper,
+  .card-wrapper,
+  .post-list a.card-wrapper {
+    pointer-events: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
