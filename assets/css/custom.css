@@ -270,3 +270,20 @@ body.post #related-posts a.post-preview.card {
   position: relative;
   display: block;
 }
+/* --- Pagination 修正 --- */
+.pagination {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  white-space: nowrap;
+}
