@@ -1,6 +1,11 @@
 /* --- custom.scss --- */
 /* ここに自分のカスタムを全部書いてOK */
 
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+}
 
 .main {
   display: flex;
@@ -318,10 +323,16 @@ body.post #related-posts a.post-preview.card {
   margin: 1.5rem auto;
   background: rgba(0, 0, 0, 0.6);
   color: #f2f2f2;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1rem 1.2rem;
   text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  backdrop-filter: none; /* ← グレーのモヤを無効化 */
+
 }
+
 
 .kuon-ic {
   width: 48px;
@@ -329,6 +340,11 @@ body.post #related-posts a.post-preview.card {
   border-radius: 50%;
   display: block;
   margin: 0 auto 0.8rem auto; /* センター寄せ */
+  object-fit: cover;
+  opacity: 1 !important;
+  transition: none !important;
+  filter: none !important;
+  animation: none !important;
 }
 .meguri {
   max-width: 75%;
