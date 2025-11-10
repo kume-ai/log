@@ -13,8 +13,8 @@ tags: [AI]
 ### H3 見出し（中見出し）
 #### H4 見出し（小見出し）
 
-<p style="text-align: left;">
-<img src="/assets/img/meguri-face.jpg" class="ic"></p>
+
+<img src="/assets/img/meguri-face.jpg" class="ic align-left">
 <div class="meguri">
 やったー！！  
 びよーんが消えた。このテーマ、最初ほんと頑固だったけど、
