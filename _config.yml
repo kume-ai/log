@@ -216,14 +216,21 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
-
+include:
+  - assets/css/custom.css
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled:
+    - year
+    - month
+    - categories
+    - tags
   layouts:
+    year: archive
+    month: archive
     category: category
     tag: tag
   permalinks:
-    tag: /tags/:name/
+    year: /archive/:year/
+    month: /archive/:year/:month/
     category: /categories/:name/
-include:
-  - assets/css/custom.css
+    tag: /tags/:name/

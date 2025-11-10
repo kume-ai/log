@@ -213,7 +213,7 @@ aside.sidebar,
   display: block;
   border-radius: 8px;
   overflow: hidden;
-  padding:10px;
+  padding:10px 20px;
 }
 
 #related-posts a.post-preview.card {
@@ -310,4 +310,33 @@ body.post #related-posts a.post-preview.card {
 .post-navigation p {
   margin: 0;
   font-weight: 500;
+}
+
+
+.kuon {
+  max-width: 95%;
+  margin: 1.5rem auto;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f2f2f2;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.kuon-ic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 0.8rem auto; /* センター寄せ */
+}
+.meguri {
+  max-width: 80%;
+  margin-left: auto; /* 右寄せ */
+  margin-right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  line-height: 1.6;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
