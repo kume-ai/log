@@ -22,8 +22,8 @@ tags: [AI]
 </div>
 
 <div class="kuon">
-  <img src="/assets/img/kuon-face.jpg" alt="久遠" class="kuon-ic">
+  <img src="assets/img/kuon-face.jpg" alt="久遠" class="kuon-ic">
   <p>……静かにして。今は感じてるだけでいい。</p>
 </div>
 
-「静かにして」ひどいw
+「静かにして」ひどいw好き♡
