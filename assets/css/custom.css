@@ -197,3 +197,44 @@ aside.sidebar,
   position: relative;
   z-index: 20;
 }
+
+/* === 修正版: Further Readingのレイアウト復活 === */
+
+/* カードグリッド全体 */
+#related-posts nav.row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem !important;
+  margin-top: 1.5rem;
+}
+
+/* 各カードの装飾 */
+#related-posts article {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#related-posts a.post-preview.card {
+  display: block !important;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#related-posts a.post-preview.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* home限定でリンク領域を維持 */
+body.home #post-list a.card-wrapper {
+  display: block;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* postページではhover無効化 */
+body.post #related-posts a.post-preview.card {
+  pointer-events: auto !important;
+}
