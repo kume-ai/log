@@ -36,7 +36,7 @@ function switchLQIP() {
 }
 
 export function loadImg() {
-  const images = document.querySelectorAll('article img');
+  const images = document.querySelectorAll('img');
 
   if (images.length === 0) {
     return;
