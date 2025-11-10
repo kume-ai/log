@@ -216,6 +216,7 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+  
 include:
   - assets/css/custom.css
 jekyll-archives:
