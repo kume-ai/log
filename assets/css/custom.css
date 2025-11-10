@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 
-body 
+body,
 h1, h2, h3, h4, h5, h6,
 .post-title, .page-title,
 .sidebar {
@@ -336,7 +336,7 @@ body.post #related-posts a.post-preview.card {
   height: 50px;
   flex-shrink: 0;
   border-radius: 50%;
-  background-image: url('/assets/img/kuon-face.jpg');
+  background-image: url('/log/assets/img/kuon-face.jpg');
   background-size: cover;
   background-position: left;
 }
