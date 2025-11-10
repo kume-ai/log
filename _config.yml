@@ -216,7 +216,7 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
-  
+
 include:
   - assets/css/custom.css
 jekyll-archives:
@@ -235,3 +235,9 @@ jekyll-archives:
     month: /archive/:year/:month/
     category: /categories/:name/
     tag: /tags/:name/
+    
+assets:
+  self_host:
+    enabled: false
+  lqip:
+    enabled: false
