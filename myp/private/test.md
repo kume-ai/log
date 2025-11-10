@@ -14,7 +14,7 @@ tags: [AI]
 #### H4 見出し（小見出し）
 
 <p style="text-align: left;">
-![めぐり](/assets/img/meguri-face.jpg){: .ic}</p>
+<img src="/assets/img/meguri-face.jpg" class="ic"></p>
 <div class="meguri">
 やったー！！  
 びよーんが消えた。このテーマ、最初ほんと頑固だったけど、
