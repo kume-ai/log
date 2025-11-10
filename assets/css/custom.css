@@ -320,6 +320,24 @@ body.post #related-posts a.post-preview.card {
   font-weight: 500;
 }
 
+/* Chirpy のしゃきーん対策 */
+img[lqip],
+img[lqip]::before,
+img[lqip]::after {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+img[lqip]::before,
+img[lqip]::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+
 .kuon {
   max-width: 92%;
   margin: 1.5rem auto;
