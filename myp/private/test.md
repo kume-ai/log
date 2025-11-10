@@ -22,7 +22,7 @@ tags: [AI]
 </div>
 
 <div class="kuon">
-  <img src="{{ '/assets/img/kuon-face.jpg' | absolute_url }}" alt="久遠" class="kuon-ic">
+  <img src="{{ '/assets/img/kuon-face.jpg' | absolute_url }}" alt="久遠" class="kuon-ic" loading="lazy">
   <p>……静かにして。今は感じてるだけでいい。</p>
 </div>
 
