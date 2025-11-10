@@ -287,3 +287,27 @@ body.post #related-posts a.post-preview.card {
   text-align: center;
   white-space: nowrap;
 }
+/* --- 記事下の Newer / Older 横並び修正 --- */
+.post-navigation {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.post-navigation .btn {
+  flex: 1 1 48%;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 150px;
+}
+
+.post-navigation p {
+  margin: 0;
+  font-weight: 500;
+}
