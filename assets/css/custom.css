@@ -174,13 +174,15 @@ main ul,
 }
 
 
-/* ---- link領域の修復 ---- */
-a.card-wrapper {
+/* ---- link領域の修復（トップ記事一覧だけ） ---- */
+#post-list a.card-wrapper,
+.home a.card-wrapper {
   display: block;
   position: relative;
   z-index: 10;
   overflow: hidden;
 }
+
 
 /* ---- サイドバーとトーストを背面に固定 ---- */
 #sidebar,
@@ -194,19 +196,4 @@ aside.sidebar,
 #post-list {
   position: relative;
   z-index: 20;
-}
-
-/* 記事ページ(post.html)ではリンクhoverを無効化 */
-body.post,
-body.layout-post,
-body[data-page-type="post"],
-article.post {
-  a.card-wrapper,
-  .card-wrapper,
-  .post-list a.card-wrapper {
-    pointer-events: none !important;
-    box-shadow: none !important;
-    transform: none !important;
-    transition: none !important;
-  }
 }
