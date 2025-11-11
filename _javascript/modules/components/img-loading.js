@@ -2,7 +2,29 @@
  * Setting up image lazy loading and LQIP switching
  */
 
+const ATTR_DATA_SRC = 'data-src';
+const ATTR_DATA_LQIP = 'data-lqip';
 
+const cover = {
+  SHIMMER: 'shimmer',
+  BLUR: 'blur'
+};
+
+function removeCover(clzss) {
+  this.parentElement.classList.remove(clzss);
+}
+
+function handleImage() {
+  if (!this.complete) {
+    return;
+  }
+
+  if (this.hasAttribute(ATTR_DATA_LQIP)) {
+    removeCover.call(this, cover.BLUR);
+  } else {
+    removeCover.call(this, cover.SHIMMER);
+  }
+}
 
 /**
  * Switches the LQIP with the real image URL.

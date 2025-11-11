@@ -352,6 +352,22 @@ img[data-src] {
   z-index: auto !important;
 }
 
+/* ---- LQIP shimmer/blur 全殺しモード ---- */
+.shimmer::before,
+.shimmer::after,
+.blur::before,
+.blur::after {
+  animation: none !important;
+  background: none !important;
+  content: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
 
 .kuon {
   max-width: 92%;
