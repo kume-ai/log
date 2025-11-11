@@ -47,11 +47,11 @@ export function loadImg() {
   });
 
   // Images loaded from the browser cache do not trigger the 'load' event
-  document.querySelectorAll('article img[loading="lazy"]').forEach((img) => {
-    if (img.complete) {
-      removeCover.call(img, cover.SHIMMER);
-    }
-  });
+  //document.querySelectorAll('article img[loading="lazy"]').forEach((img) => {
+    //if (img.complete) {
+      //removeCover.call(img, cover.SHIMMER);
+    //}
+  //});
 
   // LQIPs set by the data URI or WebP will not trigger the 'load' event,
   // so manually convert the URI to the URL of a high-resolution image.
