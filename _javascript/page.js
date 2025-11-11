@@ -1,13 +1,13 @@
 import { basic, initSidebar, initTopbar } from './modules/layouts';
 import {
-  //loadImg,
-  imgPopup,
+  loadImg,
+  //imgPopup,
   initClipboard,
   loadMermaid
 } from './modules/components';
 
-//loadImg();
-imgPopup();
+loadImg();
+//imgPopup();
 initSidebar();
 initTopbar();
 initClipboard();
