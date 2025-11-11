@@ -28,5 +28,6 @@ tags: [AI]
 
 「静かにして」ひどいw好き♡
 
+
 {% include meg.html content="やったー！びよーんが消えた！" %}
 {% include kuo.html content="……静かにして。今は感じてるだけでいい。" %}
