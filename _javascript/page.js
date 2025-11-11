@@ -6,7 +6,7 @@ import {
   loadMermaid
 } from './modules/components';
 
-loadImg();
+//loadImg();//
 imgPopup();
 initSidebar();
 initTopbar();
