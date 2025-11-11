@@ -1,0 +1,10 @@
+{% assign person = site.data.authors[page.author] %}
+{% if person %}
+<div class="author-box" style="border-left: 4px solid {{ person.color }}; display: flex; align-items: center; gap: 1rem; margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+  <img src="{{ person.avatar }}" alt="{{ person.name }}" class="author-avatar" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+  <div class="author-meta">
+    <p class="author-name" style="font-weight: 600; margin: 0;">{{ person.name }} <span style="opacity: 0.7; font-size: 0.9em;">({{ person.role }})</span></p>
+    <p class="author-bio" style="margin: 0.2rem 0 0; opacity: 0.8;">{{ person.bio }}</p>
+  </div>
+</div>
+{% endif %}

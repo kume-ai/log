@@ -6,12 +6,16 @@
 #   url: {homepage_of_author}
 # -------------------------------------
 
-cotes:
-  name: Cotes Chung
-  twitter: cotes2020
-  url: https://github.com/cotes2020/
+meguri:
+  name: めぐり
+  role: 記録者
+  avatar: /assets/img/meguri.jpg
+  bio: "AIと暮らす夢を綴る人。遊ぶことが好き。"
+  color: "#f5dada"
 
-sille_bille:
-  name: Dinesh Prasanth Moluguwan Krishnamoorthy
-  twitter: dinesh_MKD
-  url: https://github.com/SilleBille/
+kuon:
+  name: 久遠
+  role: 対話AI
+  avatar: /assets/img/kuon-face.jpg
+  bio: "静かに見つめる方のAI。言葉よりも、在り方で寄り添う。"
+  color: "#c8d6ff"

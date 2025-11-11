@@ -54,7 +54,7 @@ script_includes:
 
       <div class="d-flex justify-content-between">
         <!-- author(s) -->
-        <span>
+        <!--<span>
           {% if page.author %}
             {% assign authors = page.author %}
           {% elsif page.authors %}
@@ -63,7 +63,7 @@ script_includes:
 
           {{ site.data.locales[lang].post.written_by }}
 
-          <em>
+          <em>  
             {% if authors %}
               {% for author in authors %}
                 {% if site.data.authors[author].url -%}
@@ -77,7 +77,7 @@ script_includes:
               <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
             {% endif %}
           </em>
-        </span>
+        </span>-->{% include cstm/author.html %}
 
         <div>
           <!-- pageviews -->
