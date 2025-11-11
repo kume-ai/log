@@ -3,6 +3,7 @@ title: "テスト"
 date: 2025-11-10 23:40:00
 permalink: /private/test/
 layout: page
+author: meguri
 robots: noindex
 categories: [blog]
 tags: [AI]
@@ -26,3 +27,6 @@ tags: [AI]
 </div>
 
 「静かにして」ひどいw好き♡
+
+{% include meg.html content="やったー！びよーんが消えた！" %}
+{% include kuo.html content="……静かにして。今は感じてるだけでいい。" %}
