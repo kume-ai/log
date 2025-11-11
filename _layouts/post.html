@@ -77,8 +77,7 @@ script_includes:
               <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
             {% endif %}
           </em>
-        </span>-->{% include cstm/author.html %}
-{% include cstm/note.html %}
+        </span>-->
         <div>
           <!-- pageviews -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
@@ -123,7 +122,10 @@ script_includes:
 
   <div class="content">
     {{ content }}
+    
   </div>
+  {% include cstm/author.html %}
+  {% include cstm/note.html %}
 
   <div class="post-tail-wrapper text-muted">
     <!-- categories -->
