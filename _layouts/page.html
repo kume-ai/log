@@ -5,6 +5,18 @@ layout: default
 {% include lang.html %}
 
 <article class="px-1">
+  {% if page.layout == 'page' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('img').forEach(img => {
+        // LQIPアニメーション属性を削除してしゃきーんを止める
+        img.removeAttribute('lqip');
+        img.classList.add('no-lqip');
+      });
+    });
+  </script>
+{% endif %}
+
   {% if page.layout == 'page' or page.collection == 'tabs' %}
     {% assign tab_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
