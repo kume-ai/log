@@ -14,6 +14,9 @@ layout: default
     <div class="content">
       {{ content }}
     </div>
+
+    {% include cstm/author.html %}
+    {% include cstm/note.html %}
   {% else %}
     {{ content }}
   {% endif %}
