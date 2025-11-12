@@ -476,3 +476,31 @@ img {
     border-radius: 8px;
   }
 }
+/* --- モバイルでもサイドバーと最近の投稿を表示 --- */
+@media (max-width: 991.98px) {
+  .d-none.d-lg-block,
+  aside.sidebar.d-none.d-lg-block {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #access-lastmod,
+  #access-lastmod ~ section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  /* サイドバーをページ下に自然配置 */
+  aside.sidebar {
+    position: relative !important;
+    width: auto !important;
+    margin-top: 2rem !important;
+    padding: 1rem !important;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+}
