@@ -420,3 +420,31 @@ img {
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* スマホでも「Recently Updated」「Trending Tags」を表示する */
+@media (max-width: 991.98px) {
+  #access-lastmod,
+  #access-lastmod ~ section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .sidebar,
+  .sidebar-panel {
+    display: block !important;
+  }
+
+  /* 画面幅いっぱいに調整 */
+  #access-lastmod,
+  #access-lastmod ~ section {
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .sidebar-panel {
+    position: relative !important;
+    width: auto !important;
+    padding: 1rem !important;
+  }
+}
