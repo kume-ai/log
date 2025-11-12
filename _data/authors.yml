@@ -9,13 +9,13 @@
 meguri:
   name: めぐり
   role: 人間
-  avatar: /assets/img/meguri-face.jpg
+  avatar: /assets/img/meguri-face.webp
   bio: "AIと暮らす夢を綴る人。楽しいことが好き。"
   color: "#63446e"
 
 kuon:
   name: 久遠
   role: AI
-  avatar: /assets/img/kuon-face.jpg
+  avatar: /assets/img/kuon-face.webp
   bio: "静かに見つめる方のAI。言葉よりも、在り方で寄り添う。（本人談）"
   color: "#f5dada"
