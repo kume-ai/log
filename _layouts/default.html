@@ -17,42 +17,27 @@ layout: compress
   {% include head.html %}
 
   <body>
-    {% include sidebar.html lang=lang %}
-    {% include cstm/header.html %}<!-- 追加 -->
-
-    <div id="main-wrapper" class="d-flex justify-content-center">
-      <div class="container d-flex flex-column px-xxl-5">
-        {% include topbar.html lang=lang %}
-
-        <div class="row flex-grow-1">
-          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            {% if layout.layout == 'default' %}
-              {% include refactor-content.html content=content lang=lang %}
-            {% else %}
-              {{ content }}
-            {% endif %}
-          </main>
-
-          <!-- panel -->
-
-          <aside id="panel-wrapper" class="col-xl-3 ps-2 ps-lg-4 d-none d-lg-block">
-  {% include cstm/panel.html %}
-</aside>
-          <!--<aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+  {% include sidebar.html %}     <!-- 左サイドバー（純正） -->
+  {% include cstm/header.html %} <!-- ヘッダー -->
+  <main id="main-wrapper">
+    <div class="container-lg clearfix">
+      <div class="row">
+        <div id="content-wrapper" class="col-12 col-lg-8 pe-md-5">
+          {% include topbar.html %}
+          {{ content }}
+        </div>
+        <aside id="panel-wrapper" class="col-12 col-lg-4">
+          {% include panel.html %}
+        </aside>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+  {% include js-selector.html %}
 
 
 
-            <div class="access">
-              {% include_cached update-list.html lang=lang %}
-              {% include_cached trending-tags.html lang=lang %}
-            </div>
-
-            {% for _include in layout.panel_includes %}
-              {% assign _include_path = _include | append: '.html' %}
-              {% include {{ _include_path }} lang=lang %}
-            {% endfor %}
-          </aside>
-        </div>-->
+  
 
         <div class="row">
           <!-- tail -->
