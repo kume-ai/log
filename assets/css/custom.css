@@ -442,13 +442,15 @@ img {
   border-radius: 50%;
 }
 
-/* === hide LEFT sidebar only === */
-.sidebar { display: none !important; }
-
-/* === ensure right sidebar appears === */
-.post .col-lg-3,
-.page .col-lg-3 {
-  display: block !important;
-  visibility: visible !important;
+/* 左サイドバーだけ非表示（右は残す） */
+#sidebar,
+aside.sidebar {
+  display: none !important;
 }
 
+/* 右サイドバー確実に表示 */
+.sidebar-panel {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
