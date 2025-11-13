@@ -1,0 +1,51 @@
+<!-- ==========================
+     Custom Sidebar / Panel
+     ========================== -->
+
+<!-- 最近更新された投稿 -->
+<section class="panel-section">
+  <h3 class="panel-heading">
+    {{ site.data.locales[lang].panel.recently_updated | default: "Recently Updated" }}
+  </h3>
+  {% include_cached update-list.html lang=lang %}
+</section>
+
+
+<!-- アーカイブ（月ごと） -->
+<section class="panel-section">
+  <h3 class="panel-heading">Archives</h3>
+  {% assign posts_by_month = site.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" %}
+  <ul class="list-unstyled archives">
+    {% for month in posts_by_month %}
+      {% assign month_date = month.name | date: "%B %Y" %}
+      <li>
+        <a href="{{ site.baseurl }}/archives/#{{ month.name | replace: '-', '' }}">
+          {{ month_date }}
+        </a>
+        <span class="text-muted">({{ month.items | size }})</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- カテゴリー一覧 -->
+<section class="panel-section">
+  <h3 class="panel-heading">Categories</h3>
+  <ul class="list-unstyled categories">
+    {% for category in site.categories %}
+      <li>
+        <a href="{{ site.baseurl }}/categories/#{{ category[0] | slugify }}">
+          {{ category[0] }} <span class="text-muted">({{ category[1].size }})</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul></section>
+
+
+<!-- 人気タグ -->
+<section class="panel-section">
+  <h3 class="panel-heading">
+    {{ site.data.locales[lang].panel.trending_tags | default: "Trending Tags" }}
+  </h3>
+  {% include_cached trending-tags.html lang=lang %}
+</section>

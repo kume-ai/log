@@ -34,7 +34,14 @@ layout: compress
           </main>
 
           <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+
+          <aside id="panel-wrapper" class="col-xl-3 ps-2 ps-lg-4 d-none d-lg-block">
+  {% include cstm/panel.html %}
+</aside>
+          <!--<aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+
+
+
             <div class="access">
               {% include_cached update-list.html lang=lang %}
               {% include_cached trending-tags.html lang=lang %}
@@ -45,7 +52,7 @@ layout: compress
               {% include {{ _include_path }} lang=lang %}
             {% endfor %}
           </aside>
-        </div>
+        </div>-->
 
         <div class="row">
           <!-- tail -->
