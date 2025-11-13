@@ -145,7 +145,8 @@ main ul,
 
 /* --- reposition PWA update toast --- */
 #notification.toast {
-  position: fixed !important;
+  display: none !important;
+  /*position: fixed !important;
   bottom: 2rem;
   right: 2rem;
   left: auto !important;
@@ -156,7 +157,7 @@ main ul,
   border-radius: 10px;
   padding: 1rem 1.5rem;
   color: #f1f1f1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);*/
 }
 
 /* ボタンを整える */
@@ -178,7 +179,7 @@ main ul,
 }
 
 /* --- right sidebar (for archive or widgets) --- */
-#sidebar-right {
+/*#sidebar-right {
   flex: 0 0 280px;
   margin-left: 2rem;
   position: sticky;
@@ -193,14 +194,14 @@ main ul,
 }
 
 /* sidebar links */
-#sidebar-right a {
+/*#sidebar-right a {
   color: #aaa;
   text-decoration: none;
 }
 
 #sidebar-right a:hover {
   color: #58a6ff;
-}
+}*/
 
 
 /* ---- link領域の修復（トップ記事一覧だけ） ---- */
@@ -214,13 +215,13 @@ main ul,
 
 
 /* ---- サイドバーとトーストを背面に固定 ---- */
-#sidebar,
+/*#sidebar,
 aside.sidebar,
 #notification,
 #mask {
   z-index: 0 !important;
   pointer-events: none !important;
-}
+}*/
 /* ---- カード一覧エリアを最前面にしてクリック優先 ---- */
 #post-list {
   position: relative;
@@ -445,7 +446,7 @@ img {
 /* 左サイドバーだけ非表示（右は残す） */
 #sidebar,
 aside.sidebar {
-  display: none !important;
+  /*display: none !important;*/
 }
 
 /* 右サイドバー確実に表示 */
