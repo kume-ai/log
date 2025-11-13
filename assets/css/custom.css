@@ -443,15 +443,25 @@ img {
   border-radius: 50%;
 }
 
-/* 左サイドバーだけ非表示（右は残す） */
-#sidebar,
-aside.sidebar {
-  /*display: none !important;*/
-}
-
-/* 右サイドバー確実に表示 */
-.sidebar-panel {
+/* === fix: show right sidebar (panel-wrapper) === */
+#panel-wrapper {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+/* 右サイドバーの中身を整える（色・背景） */
+#panel-wrapper .access {
+  background: rgba(32, 32, 32, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  color: #eee;
+}
+
+/* 左サイドバーだけ非表示 */
+#sidebar {
+  display: none !important;
 }
