@@ -15,16 +15,18 @@ layout: compress
   {% include head.html %}
 
   <body>
-    {% include sidebar.html lang=lang %}
-    {% include cstm/header.html %}  <!-- おまえのヘッダー -->
+
+    {# 左サイドバーは完全に非表示 #}
+    <!-- {% include sidebar.html lang=lang %} -->
+
+    {# カスタムヘッダーは残す #}
+    {% include cstm/header.html %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
-
         {% include topbar.html lang=lang %}
 
         <div class="row flex-grow-1">
-          <!-- メインコンテンツ -->
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             {% if layout.layout == 'default' %}
               {% include refactor-content.html content=content lang=lang %}
@@ -33,20 +35,28 @@ layout: compress
             {% endif %}
           </main>
 
-          <!-- 右サイドバー -->
-          <aside id="panel-wrapper" aria-label="Panel" class="col-xl-3 ps-2 ps-lg-4 d-none d-lg-block">
-            {% include panel.html lang=lang %}
+          <!-- ✅ 右サイドバー復活 -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted d-none d-lg-block">
+
+            <div class="access">
+              {% include_cached update-list.html lang=lang %}
+              {% include_cached trending-tags.html lang=lang %}
+            </div>
+
+            {% for _include in layout.panel_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
           </aside>
         </div>
 
-        <!-- フッター -->
         <div class="row">
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
             {% for _include in layout.tail_includes %}
               {% assign _include_path = _include | append: '.html' %}
               {% include {{ _include_path }} lang=lang %}
             {% endfor %}
-
             {% include_cached footer.html lang=lang %}
           </div>
         </div>
@@ -54,7 +64,6 @@ layout: compress
         {% include_cached search-results.html lang=lang %}
       </div>
 
-      <!-- トップに戻るボタン -->
       <aside aria-label="Scroll to Top">
         <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
           <i class="fas fa-angle-up"></i>
@@ -68,7 +77,6 @@ layout: compress
       {% include_cached notification.html lang=lang %}
     {% endif %}
 
-    <!-- スクリプト類 -->
     {% for _include in layout.script_includes %}
       {% assign _include_path = _include | append: '.html' %}
       {% include {{ _include_path }} %}
