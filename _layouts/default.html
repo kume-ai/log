@@ -5,42 +5,42 @@ layout: compress
 <!doctype html>
 
 {% include origin-type.html %}
-
 {% include lang.html %}
 
 {% if site.theme_mode %}
   {% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
 {% endif %}
 
-<!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
 
   <body>
-  {% include sidebar.html %}     <!-- 左サイドバー（純正） -->
-  {% include cstm/header.html %} <!-- ヘッダー -->
-  <main id="main-wrapper">
-    <div class="container-lg clearfix">
-      <div class="row">
-        <div id="content-wrapper" class="col-12 col-lg-8 pe-md-5">
-          {% include topbar.html %}
-          {{ content }}
+    {% include sidebar.html lang=lang %}
+    {% include cstm/header.html %}  <!-- おまえのヘッダー -->
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+
+        {% include topbar.html lang=lang %}
+
+        <div class="row flex-grow-1">
+          <!-- メインコンテンツ -->
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% if layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </main>
+
+          <!-- 右サイドバー -->
+          <aside id="panel-wrapper" aria-label="Panel" class="col-xl-3 ps-2 ps-lg-4 d-none d-lg-block">
+            {% include panel.html lang=lang %}
+          </aside>
         </div>
-        <aside id="panel-wrapper" class="col-12 col-lg-4">
-          {% include panel.html %}
-        </aside>
-      </div>
-    </div>
-  </main>
-  {% include footer.html %}
-  {% include js-selector.html %}
 
-
-
-  
-
+        <!-- フッター -->
         <div class="row">
-          <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
             {% for _include in layout.tail_includes %}
               {% assign _include_path = _include | append: '.html' %}
@@ -54,6 +54,7 @@ layout: compress
         {% include_cached search-results.html lang=lang %}
       </div>
 
+      <!-- トップに戻るボタン -->
       <aside aria-label="Scroll to Top">
         <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
           <i class="fas fa-angle-up"></i>
@@ -67,8 +68,7 @@ layout: compress
       {% include_cached notification.html lang=lang %}
     {% endif %}
 
-    <!-- Embedded scripts -->
-
+    <!-- スクリプト類 -->
     {% for _include in layout.script_includes %}
       {% assign _include_path = _include | append: '.html' %}
       {% include {{ _include_path }} %}
