@@ -10,10 +10,31 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'M PLUS 1p', sans-serif;
 }
 
+/* === Reset for layout breakages === */
+.sidebar,
+.sidebar-panel {
+  display: block !important;
+}
+
+.row,
+.col,
+.col-lg-3,
+.col-xl-3 {
+  display: unset !important;
+  flex-direction: unset !important;
+}
+
+.container,
+.content {
+  max-width: unset !important;
+  margin: unset !important;
+}
+
+
 .main {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  /*max-width: 1000px;*/
   margin: 80px auto 0 auto;
   padding: 2rem;
 }
@@ -420,3 +441,14 @@ img {
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* === hide LEFT sidebar only === */
+.sidebar { display: none !important; }
+
+/* === ensure right sidebar appears === */
+.post .col-lg-3,
+.page .col-lg-3 {
+  display: block !important;
+  visibility: visible !important;
+}
+
