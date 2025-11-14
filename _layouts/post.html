@@ -19,7 +19,7 @@ script_includes:
   <header>
     <h1 data-toc-skip>{{ page.title }}</h1>
     {% if page.description %}
-      <p class="post-desc fw-light mb-4">{{ page.description }}</p>
+      <!-- <p class="post-desc fw-light mb-4">{{ page.description }}</p>-->
     {% endif %}
 
     <div class="post-meta text-muted">
@@ -55,7 +55,7 @@ script_includes:
       {% endif %}
 
 
-      {% include cstm/author.html %}
+     
       <div class="d-flex justify-content-between">
         <!-- author(s) -->
         <!--<span>
@@ -93,8 +93,8 @@ script_includes:
             </span>
           {% endif %}
 
-          <!-- read time -->
-          {% include read-time.html content=content prompt=true lang=lang %}
+          <!-- read time
+          {% include read-time.html content=content prompt=true lang=lang %} -->
         </div>
       </div>
     </div>
