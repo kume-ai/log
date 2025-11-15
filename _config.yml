@@ -241,3 +241,5 @@ assets:
     enabled: false
   lqip:
     enabled: false
+search:
+  enabled: true
