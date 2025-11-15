@@ -502,3 +502,7 @@ img {
   color: #fff;
   text-decoration: underline;
 }
+/* ナビバーの高さ分、メインエリアを下げる */
+#main-wrapper {
+  margin-top: 80px !important;
+}
