@@ -534,23 +534,30 @@ img {
     flex-direction: column !important;
   }
 }
-/* === Fix: スマホでpostページが広がる問題 === */
-article.px-1,
-.post-content,
-.content {
+/* === Fix: postページでスマホ幅が崩れる対策 === */
+.container {
   max-width: 100% !important;
-  width: 100% !important;
   margin: 0 auto !important;
-  box-sizing: border-box;
   padding-left: 1rem;
   padding-right: 1rem;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+article.px-1,
+.post-content {
+  width: 100% !important;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
   article.px-1,
   .post-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+    font-size: 1rem;
   }
 }
 
