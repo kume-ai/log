@@ -22,13 +22,13 @@ h1, h2, h3, h4, h5, h6,
 .col-xl-3 {
   display: unset !important;
   flex-direction: unset !important;
-}*/
+}
 
 .container,
 .content {
   max-width: unset !important;
   margin: unset !important;
-}
+}*/
 
 
 .main {
