@@ -534,3 +534,6 @@ img {
     flex-direction: column !important;
   }
 }
+#search-wrapper {
+  z-index: 9999 !important;
+}
