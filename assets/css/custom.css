@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6,
 /*}*/
 
 header.navbar > .inner {
-  /*max-width: 1000px;*/
+  max-width: 1000px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -505,4 +505,18 @@ img {
 /* ナビバーの高さ分、メインエリアを下げる */
 #main-wrapper {
   margin-top: 80px !important;
+}
+/* === 修復: right sidebar layout === */
+.row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+}
+
+#panel-wrapper {
+  flex: 0 0 280px !important;
+  margin-left: 2rem !important;
+  position: sticky !important;
+  top: 100px !important;
+  align-self: flex-start !important;
 }
