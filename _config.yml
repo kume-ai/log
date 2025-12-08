@@ -15,7 +15,7 @@ timezone: Asia/Taipei
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy-!! # the main title
+title: AIと暮らす夢、そして今 # the main title
 
 tagline: A text-focused Jekyll theme # it will display as the subtitle
 
@@ -35,7 +35,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: めぐり
+  name: めぐり、久遠
   image: /log/assets/img/ogp.webp
   #email: example@domain.com # change to your email address
   #links:
