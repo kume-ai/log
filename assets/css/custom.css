@@ -509,7 +509,7 @@ img {
 /* === 修復: right sidebar layout === */
 .row {
   display: flex !important;
-  flex-wrap: nowrap !important;
+  flex-wrap: wrap !important;
   align-items: flex-start !important;
 }
 
@@ -557,7 +557,14 @@ article.px-1,
   .post-content {
     max-width: 100%;
     padding: 0 1rem;
-    font-size: 1rem;
+    font-size: 1rem;}
+ 
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  header.navbar .nav-right ul {
+    gap: 1rem;
   }
 }
 
