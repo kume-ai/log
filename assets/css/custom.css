@@ -509,7 +509,7 @@ img {
 /* === 修復: right sidebar layout === */
 .row {
   display: flex !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
   align-items: flex-start !important;
 }
 
