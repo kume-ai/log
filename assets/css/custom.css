@@ -558,14 +558,7 @@ article.px-1,
     max-width: 100%;
     padding: 0 1rem;
     font-size: 1rem;}
- 
-  .navbar {
-    padding: 0 1rem;
-  }
 
-  header.navbar .nav-right ul {
-    gap: 1rem;
-  }
 }
 
 /* 記事内の段落を読みやすく */
